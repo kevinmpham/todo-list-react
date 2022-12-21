@@ -1,4 +1,16 @@
-.App {
+.todo-item {
+  list-style: none;
+}
+
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +48,4 @@
     transform: rotate(360deg);
   }
 }
+ */
