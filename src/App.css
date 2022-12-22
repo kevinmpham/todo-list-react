@@ -1,8 +1,98 @@
-.todo-item {
-  list-style: none;
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgreen;
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+}
+
+.content {
+  background-color: lightyellow;
+  flex-grow: 1;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  min-width: 200px;
+}
+
+.sidebar>div {
+  padding: 5px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+#all-todos-button {
+  margin-bottom: 15px;
 }
 
 
+
+.todo-form {
+  position: fixed;
+  background: lightgrey;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 1em;
+  z-index: 10;
+  transition: 200ms ease-in-out;
+}
+
+.todo-header {
+  display: flex;
+  padding: 10px;
+  font-size: 1.2em;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+.input-form {
+  padding: 10px;
+}
+
+
+
+
+
+.todo-list {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.todo-item {
+  margin: 2px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-button {
+  font-size: 1.5em;
+  align-items: center;
+}
 
 
 
