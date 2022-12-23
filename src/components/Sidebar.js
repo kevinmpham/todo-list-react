@@ -5,11 +5,11 @@ function Sidebar(props) {
 
   return (
     <div className="sidebar">
-      <div id="all-todos-button" onClick={() => filterTodos({ filterType: "all", filterData: "" })}>All Todos</div>
+      <div id="all-todos-button" className="sidebar-button" onClick={() => filterTodos({ filterType: "all", filterData: "" })}>All Todos</div>
       <div></div>
-      <div>Sort by Tag:</div>
+      <div>Filter by Tag:</div>
       {uniqueTags.map(tag => {
-        return <div key={tag} onClick={() => filterTodos({ filterType: "tag", filterData: tag })}>{tag}</div>
+        return <div className="sidebar-button" key={tag} onClick={() => filterTodos({ filterType: "tag", filterData: tag })}>{tag}</div>
       })}
     </div >
   )

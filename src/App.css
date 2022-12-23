@@ -1,5 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .app {
   display: flex;
+  margin: 0;
   flex-direction: column;
   height: 100vh;
 }
@@ -8,7 +14,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightgreen;
+  background-color: #333;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: white;
 }
 
 .main {
@@ -17,14 +26,15 @@ header {
 }
 
 .content {
-  background-color: lightyellow;
+  background-color: #eee;
   flex-grow: 1;
+  padding-top: 10px;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  background-color: lightblue;
+  background-color: #ddd;
   min-width: 200px;
 }
 
@@ -34,10 +44,13 @@ header {
   font-weight: 600;
 }
 
+.sidebar-button:hover {
+  background-color: lightblue;
+}
+
 #all-todos-button {
   margin-bottom: 15px;
 }
-
 
 
 .todo-form {
@@ -46,9 +59,10 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 400px;
-  width: 500px;
-  border: 1px solid black;
+  height: 300px;
+  width: 600px;
+  max-width: 80%;
+  border: 3px solid black;
   border-radius: 1em;
   z-index: 10;
   transition: 200ms ease-in-out;
@@ -57,31 +71,73 @@ header {
 .todo-header {
   display: flex;
   padding: 10px;
-  font-size: 1.2em;
+  font-size: 1.5em;
   justify-content: space-between;
   border-bottom: 1px solid black;
 }
 
 .input-form {
   padding: 10px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.input-form>div {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.input-form>div>input {
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.input-form>div>label {
+  display: flex;
+  justify-content: center;
+}
+
+.input-form>button {
+  font-size: 1.2em;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 
 
-
-
 .todo-list {
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   margin-top: 10px;
   padding: 0;
 }
 
 .todo-item {
-  margin: 2px;
+  margin: 8px;
   list-style: none;
-  display: flex;
   justify-content: space-between;
+  font-size: 1.3em;
+  padding: 5px 10px;
+  border-bottom: 1px solid black;
+  max-width: 800px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.todo-buttons>button {
+  margin: 2px;
+  width: 70px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.todo-item>input {
+  transform: scale(1.5);
+}
+
 
 .add-button-div {
   display: flex;
@@ -92,6 +148,7 @@ header {
 #add-button {
   font-size: 1.5em;
   align-items: center;
+  padding: 5px;
 }
 
 

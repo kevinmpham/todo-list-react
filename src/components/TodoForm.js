@@ -21,8 +21,8 @@ function TodoForm(props) {
 
   function handleOutsideClick(e) {
     if (!(e.target.classList.contains("todo-form-element") || e.target.parentElement.classList.contains("todo-form-element")) && closeOutside) {
-      { formType === "add" && closeAddForm() };
-      { formType === "edit" && closeEditForm() };
+      (formType === "add" && closeAddForm());
+      (formType === "edit" && closeEditForm());
     }
     closeOutside = true;
   }
@@ -55,8 +55,8 @@ function TodoForm(props) {
         </div>
         {formType === "add" && <button type="submit" onClick={handleAddClick}>Add</button>}
         {formType === "edit" && <button type="submit" onClick={handleEditClick}>Edit</button>}
-      </form>
-    </div>
+      </form >
+    </div >
   )
 }
 
